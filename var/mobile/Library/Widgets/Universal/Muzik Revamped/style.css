@@ -1,0 +1,208 @@
+/* 
+    MUZIK REVAMPED STYLE SHEET.
+    - MESHAL (contact@mshl.me)
+*/
+html {
+	line-height: 1.15;
+}
+body {
+	color: var(--color2);
+	font-size: calc(0.8em * var(--fsize));
+	font-weight: 500;
+	margin: 0;
+	font-family: -apple-system, sans-serif;
+}
+* {
+	margin: 0;
+	box-sizing: border-box;
+	transition: all 0.25s ease;
+}
+img {
+	max-width: 100%;
+	height: 100%;
+}
+:root {
+	--color1: #111;
+	--color2: #fff;
+	--color3: #ddd;
+
+	--width: 1;
+	--height: 1;
+	--fsize: 1;
+}
+.content {
+	width: calc(100% * var(--width));
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color1);
+	border-radius: 16px;
+	/* gap: calc(0.25rem * var(--fsize)); */
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 0.3s ease;
+	padding: calc(0.8rem * var(--height));
+}
+.blur {
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+.player {
+	width: 100%;
+	height: calc(100px * var(--height));
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: start;
+	margin-bottom: 0 !important;
+}
+
+.artwork-container {
+	background-color: transparent;
+	height: 100%;
+	padding-right: 0.25rem;
+}
+
+.artwork {
+	border-radius: calc(16px * var(--height));
+	transition: all 0.6s ease;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 100%;
+	justify-content: center;
+}
+
+.song-title {
+	font-weight: 700;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.song-details {
+	margin-top: calc(0.2rem * var(--fsize));
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.song-app {
+	margin-bottom: calc(0.2rem * var(--fsize));
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	opacity: 0.7;
+	font-weight: 700;
+	font-size: calc(0.85em * var(--fsize));
+	text-transform: uppercase;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.prev,
+.play,
+.next {
+	height: auto;
+	font-size: calc(1.25rem * var(--fsize));
+	color: var(--color3);
+	margin-right: 1rem;
+}
+
+.song-slider {
+	width: 100%;
+	position: relative;
+	display: none; /* flex */
+	flex-direction: column;
+	margin-top: calc(0.5rem * var(--height));
+	padding: 0 0.5rem;
+}
+
+.seek-bar {
+	/* background: linear-gradient(to right, #82cfd0 0%, #82cfd0 50%, #fff 50%, #fff 100%); */
+	border-radius: 8px;
+	height: calc(4px * var(--height));
+	width: 100%;
+	outline: none;
+	transition: background 450ms ease-in;
+	-webkit-appearance: none;
+}
+
+.seek-bar::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: calc(12px * var(--height));
+	height: calc(12px * var(--height));
+	border-radius: 5rem;
+	border: none;
+	background-color: var(--color2);
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+	top: calc(- (6px * var(--height)));
+}
+
+.song-times {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: calc(0.85em * var(--fsize));
+	margin-bottom: 0.3rem;
+	margin-top: 0.2rem;
+}
+
+.volume-slider {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+	display: none; /* flex */
+	padding: 0 0.5rem;
+	margin-top: calc(0.2rem * var(--height));
+}
+
+.volume-bar {
+	/* background: linear-gradient(to right, #82cfd0 0%, #82cfd0 50%, #fff 50%, #fff 100%); */
+	border-radius: 8px;
+	height: calc(4px * var(--height));
+	width: 100%;
+	outline: none;
+	transition: background 450ms ease-in;
+	-webkit-appearance: none;
+	margin: auto 0.5rem;
+}
+
+.volume-bar::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: calc(12px * var(--height));
+	height: calc(12px * var(--height));
+	border-radius: 5rem;
+	border: none;
+	background-color: var(--color2);
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+	top: calc(- (6px * var(--height)));
+}
+
+#volume-icon {
+	height: 100%;
+	font-size: calc(1rem * var(--fsize));
+	color: var(--color3);
+	margin-top: auto;
+	opacity: 0.7;
+}

@@ -1,0 +1,10 @@
+Package: com.mshl.muzikrevamped
+Name: Muzik Revamped
+Version: 1.0.2
+Depends: com.matchstic.xenhtml (>= 2.0~release)
+Conflicts:
+Architecture: iphoneos-arm
+Description: Color adaptive iOS like music player.
+Author: Meshal <imeshalfm@gmail.com>
+Maintainer: Meshal <imeshalfm@gmail.com>
+Section: Widgets

@@ -1,0 +1,48 @@
+<!-- MUZIK REVAMPED HTML.
+            - MESHAL (contact@mshl.me) -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<meta charset="utf-8" />
+		<title>Muzik</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+		<link href="fonts/fontawesome/css/all.min.css" rel="stylesheet" />
+	</head>
+	<body onload="onload()">
+		<div class="content blur" id="widget-content">
+			<div class="player">
+				<div class="artwork-container"><img src="images/noalbumart.png" class="artwork" onclick="openApp()" /></div>
+
+				<div class="info">
+					<small class="song-app">PLACEHOLDER</small>
+					<div class="song-title">No Child Left Behind</div>
+					<div class="song-details">Kanye West &mdash; Donda</div>
+				</div>
+
+				<div class="controls">
+					<div class="prev fas fa-backward" onclick="javascript:api.media.previousTrack();"></div>
+					<div id="play" class="play fas fa-play" onclick="togglePlay();"></div>
+					<div class="next fas fa-forward" onclick="javascript:api.media.nextTrack();"></div>
+				</div>
+			</div>
+
+			<div class="song-slider">
+				<input min="0" max="100" type="range" value="0" class="seek-bar" id="seekbar" oninput="onScrobbleUIChanged(this.value)" onchange="onScrobbleChanged(this.value)" />
+
+				<div class="song-times">
+					<p id="current-length">--:--</p>
+					<p id="song-length">--:--</p>
+				</div>
+			</div>
+
+			<div class="volume-slider">
+				<i class="fas fa-volume-down" id="volume-icon"></i>
+				<input type="range" min="0" max="100" value="0" class="volume-bar" id="volbar" oninput="onVolumeChanged(this.value)" onchange="onVolumeChanged(this.value)" />
+				<i class="fas fa-volume-up" id="volume-icon"></i>
+			</div>
+		</div>
+	</body>
+	<script src="js/color-thief.min.js"></script>
+	<script src="js/script.js"></script>
+</html>

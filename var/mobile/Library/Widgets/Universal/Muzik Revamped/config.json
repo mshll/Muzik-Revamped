@@ -1,0 +1,172 @@
+{
+	"name": "Muzik Revamped",
+	"author": "Meshal",
+	"size": {
+		"max-width": "500px",
+		"width": "100%",
+		"height": "180px"
+	},
+	"options": [
+		{
+			"type": "title",
+			"text": "Muzik Revamped"
+		},
+		{
+			"type": "switch",
+			"text": "Hide Widget If No Media Is Playing",
+			"default": true,
+			"key": "hideWidget"
+		},
+		{
+			"type": "switch",
+			"text": "Disable Blur Effect",
+			"default": false,
+			"key": "noBlur"
+		},
+		{
+			"type": "switch",
+			"text": "Hide Media Controls",
+			"default": false,
+			"key": "hideControls"
+		},
+		{
+			"type": "switch",
+			"text": "Hide Playing App Name",
+			"default": false,
+			"key": "hideAppName"
+		},
+		{
+			"text": "Open App On Artwork Click",
+			"type": "option",
+			"default": 0,
+			"key": "chosenApp",
+			"options": [
+				{
+					"text": "Music",
+					"value": 0
+				},
+				{
+					"text": "Spotify",
+					"value": 1
+				},
+				{
+					"text": "YouTube Music",
+					"value": 2
+				},
+				{
+					"text": "Podcasts",
+					"value": 3
+				},
+				{
+					"text": "Soundcloud",
+					"value": 4
+				}
+			]
+		},
+		{
+			"default": ["0"],
+			"key": "wblocks",
+			"type": "multi",
+			"options": [
+				{
+					"value": "0",
+					"text": "Playback Time"
+				},
+				{
+					"value": "1",
+					"text": "Volume Slider"
+				}
+			],
+			"text": "Shown Blocks"
+		},
+		{
+			"default": ["0", "1"],
+			"key": "subtitle",
+			"type": "multi",
+			"options": [
+				{
+					"value": "0",
+					"text": "Track Album"
+				},
+				{
+					"value": "1",
+					"text": "Track Artist"
+				},
+				{
+					"value": "2",
+					"text": "Track Genre"
+				}
+			],
+			"comment": "",
+			"text": "Shown Secondary Text"
+		},
+		{
+			"type": "comment",
+			"text": "Shown Blocks\nChoose which parts of the widgets to show and which to hide. You can also choose their order in the widget.\n\nShown Secondary Text\nChoose and organize what to show under the track name, default is Track Artist, Track Album."
+		},
+		{
+			"type": "title",
+			"text": "Size Options"
+		},
+		{
+			"type": "slider",
+			"min": 0.0,
+			"max": 1.0,
+			"text": "Width",
+			"default": 0.98,
+			"key": "width"
+		},
+		{
+			"type": "slider",
+			"min": 0.0,
+			"max": 1.0,
+			"text": "Height",
+			"default": 0.9,
+			"key": "height"
+		},
+		{
+			"type": "slider",
+			"min": 0.0,
+			"max": 1.0,
+			"text": "Font Size",
+			"default": 0.9,
+			"key": "fsize"
+		},
+		{
+			"type": "comment",
+			"text": "WIDTH DEFAULT: 0.98,\nHEIGHT & FONT SIZE DEFAULT: 0.90\n\nFont Size will also affect the size of media controls."
+		},
+		{
+			"type": "title",
+			"text": "Widget Colors"
+		},
+		{
+			"type": "switch",
+			"text": "Use Custom Colors",
+			"default": false,
+			"key": "useCustom"
+		},
+		{
+			"type": "color",
+			"text": "Background Custom Color",
+			"default": "#1C1C1C",
+			"key": "clr1"
+		},
+		{
+			"type": "color",
+			"text": "Primary Custom Color",
+			"default": "#FFFFFF",
+			"key": "clr2"
+		},
+		{
+			"type": "color",
+			"text": "Secondary Custom Color",
+			"default": "#DDDDDD",
+			"key": "clr3"
+		},
+		{
+			"type": "comment",
+			"text": "Toggling Use Custom Colors will disable the adaptive coloring based on the track artwork and will use your custom colors instead.\n\nFOR THE BLUR TO WORK WHEN USING CUSTOM COLORS, make sure that the background color has some transparency (75% is preferred).\n\nIf you wish to use the adaptive coloring, simply toggle the option off"
+		}
+	]
+}
